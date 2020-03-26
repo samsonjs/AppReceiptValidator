@@ -210,3 +210,11 @@ extension ASN1Object {
         }
     }
 }
+
+// MARK: - BoolValue
+
+extension ASN1Object {
+    var boolValue: Bool? {
+        intValue.map { $0 != 0 }
+    }
+}
